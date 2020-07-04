@@ -4,22 +4,14 @@
 :toc: left
 :toc-title: hello模块 目录
 
+This is an example output for a service running at http://localhost:8080:
+
+.request
+
+include::{snippets}/docs/http-request.adoc[]
+
+.response
+
+include::{snippets}/docs/http-response.adoc[]
 
 
-////
-{snippets} 就是我们在pom.xml配置的<snippets></snippets>标签
-docs 就是我们在测试代码里写的文档Id叫docs
-include::{snippets}\docs\curl-request.adoc[]
-include::{snippets}\docs\httpie-request.adoc[]
-include::{snippets}\docs\response-body.adoc[]
-include::{snippets}\docs\request-body.adoc[]
-////
-.http-request
-include::{snippets}\docs\http-request.adoc[]
-.request-headers 请求头说明
-include::{snippets}\docs\request-headers.adoc[]
-.request-parameters 请求参数说明
-include::{snippets}\docs\request-parameters.adoc[]
-include::{snippets}\docs\http-response.adoc[]
-
-== 123

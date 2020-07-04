@@ -66,16 +66,29 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
-	<!-- https://blog.csdn.net/ljh_learn_from_base/article/details/95866258y -->
+	<!-- https://www.jianshu.com/p/2a92375a51f2 -->
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>com.github.apiggs</groupId>
+				<artifactId>apiggs-maven-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>apiggs</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- options in there -->
+				</configuration>
+			</plugin>
+
+			<!-- https://blog.csdn.net/ljh_learn_from_base/article/details/95866258y -->
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
@@ -116,6 +129,7 @@
 						<configuration>
 							<outputDirectory>
 								${project.build.outputDirectory}/static/docs
+								<outputDir>${project.build.directory}/generated-snippets/asciidoc</outputDir>
 							</outputDirectory>
 							<resources>
 								<resource>
